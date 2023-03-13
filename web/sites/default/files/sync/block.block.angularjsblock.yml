@@ -1,0 +1,20 @@
+uuid: d211d394-d878-4a1d-968c-ae916f76e9e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - angularjs_module
+  theme:
+    - olivero
+id: angularjsblock
+theme: olivero
+region: sidebar
+weight: -9
+provider: null
+plugin: angularjs_module_angular_block
+settings:
+  id: angularjs_module_angular_block
+  label: 'AngularJS Block'
+  label_display: visible
+  provider: angularjs_module
+visibility: {  }

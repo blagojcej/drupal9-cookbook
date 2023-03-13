@@ -1,0 +1,20 @@
+uuid: b367afc7-a9ef-4e60-9d8e-b0d6e138a7fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - hal
+    - serialization
+    - taxonomy
+    - user
+id: entity.taxonomy_term
+plugin_id: 'entity:taxonomy_term'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - hal_json
+    - json
+  authentication:
+    - cookie

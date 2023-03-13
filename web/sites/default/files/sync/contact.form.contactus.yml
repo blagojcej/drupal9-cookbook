@@ -1,0 +1,14 @@
+uuid: 45d78755-9121-4242-a762-51bb8a63f2e7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: GjBlWPLBvnZsD2pcZBKj1OAxFbEv2CnaQKZmyhtNEdA
+id: contactus
+label: 'Contact Us'
+recipients:
+  - webmaster@example.com
+reply: ''
+weight: 0
+message: null
+redirect: null

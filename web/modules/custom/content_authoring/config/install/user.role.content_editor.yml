@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.editor_format
+    - node.type.article
+    - node.type.page
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - filter
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false

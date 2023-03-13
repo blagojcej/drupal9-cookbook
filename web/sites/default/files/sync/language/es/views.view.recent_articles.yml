@@ -1,0 +1,9 @@
+display:
+  default:
+    display_options:
+      title: 'Articulos Recientes'
+      empty:
+        area:
+          content:
+            value: '<p>Actualmente no hay artículos recientes.</p>'
+            format: basic_html

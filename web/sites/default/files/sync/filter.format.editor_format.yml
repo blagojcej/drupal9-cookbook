@@ -1,0 +1,8 @@
+uuid: a4ac50c1-564e-457e-ac0d-6277cb6c8e76
+langcode: en
+status: true
+dependencies: {  }
+name: 'Editor Format'
+format: editor_format
+weight: 0
+filters: {  }

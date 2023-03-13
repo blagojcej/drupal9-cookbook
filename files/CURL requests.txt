@@ -1,0 +1,26 @@
+curl --request GET \
+--url 'https://default.ddev.site/taxonomy/term/1?_format=json' \
+--header 'accept: application/json'
+
+curl --request GET \
+--url https://default.ddev.site/session/token \
+--header 'accept: text/plain'
+
+curl --verbose --request POST \
+--url 'https://default.ddev.site/node?_format=hal_json' \
+--user admin:admin \
+--header 'accept: application/hal+json' \
+--header 'content-type: application/hal+json' \
+--data '{"_links":{"type":{"href":"https://default.ddev.site/rest/type/node/page"}},"title":[{"value":"Article via POST!"}],"body":[{"value":"We created this over the RESTful API!"}]}'
+
+curl --verbose --request PATCH \
+--url 'https://default.ddev.site/node/52?_format=hal_json' \
+--user admin:admin \
+--header 'accept: application/hal+json' \
+--header 'content-type: application/hal+json' \
+--data '{"_links":{"type":{"href":"https://default.ddev.site/rest/type/node/page"}},"title":[{"value":"Node 52 updated via REST!"}]}'
+
+curl --request GET \
+--url 'https://default.ddev.site/node/1?_format=hal_json' \
+--header 'accept: application/json' \
+–-header 'authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijc1ZjhlNzljOGFhM2VlMjU3N2FjNmY3YmU2MzI2ZjU2MjkyMGE5NmRkMDhhZTcxYzcyNWU2MmE3MDU5ZGJlODY0NzAxOGFjZDBlZTcxODUyIn0.eyJhdWQiOiIxMDQwMjIwMTAzNDYwLWJnNzEza210cXMwYjFiZnRsdXFib2Y5b3Rub3ZiNGdyLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwianRpIjoiNzVmOGU3OWM4YWEzZWUyNTc3YWM2ZjdiZTYzMjZmNTYyOTIwYTk2ZGQwOGFlNzFjNzI1ZTYyYTcwNTlkYmU4NjQ3MDE4YWNkMGVlNzE4NTIiLCJpYXQiOjE2Nzg3NDQ0NDQsIm5iZiI6MTY3ODc0NDQ0NCwiZXhwIjoxNjc4NzQ0NzQ0LjQxNTYyOCwic3ViIjoiMSIsInNjb3BlIjpbImF1dGhlbnRpY2F0ZWQiLCJjb250ZW50X2VkaXRvciJdfQ.kdZIEZd-VSG-bnuwO3ug63K_jd6yPMISt9O488LIjuWfMW-8CxBEsEq_-8sfUi5jht_2zJyxs6cK7d97IQ4M6bjUY89Gd9ZctkEzLOWTQItS-szPyO09YAuEpiLgo-APjReho5IMcdJvG2rUFvhUMqXL9mJmf5FX85qvMKW-GBW6qxzaYvsURUeWpdPMSW7lPhtNvpWFCZo1vz4H2Izl8kME3y4IMPkgw1bJ3JwOSJWbnOZ-sAI1TQ0aowkdXS_ip_-ZJJjCjHGaBRcptiMvPCthL2Zq3Xq-9yyuwQoY1QsZc0SWD-iwfTmP9xH_0d8zntz_vjYfQ1rnjX_NdeC6R8t3shdYGtwNI4Z4H7vggIPWVEV4iFhCsY5BXacGftir0EbKmtalKXSCdnQdW76Cf-qSXK-VCYffD6H9zXrJJtYvCc-meyuBOUa33g4drWoowWhkY69310nz13fmfMQzHtTHFWK27hKhoTl7yhlUKBhgqAbMaYMKrCw2e19VnhHTEPV1PHTGappyfb0zU_ZxJ6TbXHejjvSpGXbbmbxgDROXOppUMZq_LOpdCD-ym5ErTCjCxhEwt5iMSv5pqheE-3pXfVPSynz-Qg8WDqxrZxKAKNjIZhpXT3IVX4-ieXd0yw0mjXsgBYzP8MO7o1BJQIiVFdw_g3fG5tbFpCoMVnA'

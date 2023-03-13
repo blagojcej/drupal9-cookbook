@@ -1,0 +1,21 @@
+uuid: e0f111eb-31bc-4c5e-aeba-c8cd083a0568
+langcode: en
+status: true
+dependencies:
+  module:
+    - mymodule
+  theme:
+    - olivero
+id: copyright
+theme: olivero
+region: footer_bottom
+weight: 0
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: Copyright
+  label_display: '0'
+  provider: mymodule
+  company_name: ' X Gate'
+visibility: {  }

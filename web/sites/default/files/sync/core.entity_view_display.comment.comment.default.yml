@@ -1,0 +1,39 @@
+uuid: af14309e-381c-4c39-9a1a-095c7f555c1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - field.field.comment.comment.comment_body
+    - field.field.comment.comment.field_real_name
+  module:
+    - mymodule
+    - text
+_core:
+  default_config_hash: aBQUGsQ46M4048fIlFuTXwl2zV0j2cJX89CTUobh9hA
+id: comment.comment.default
+targetEntityType: comment
+bundle: comment
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_real_name:
+    type: realname_one_line
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

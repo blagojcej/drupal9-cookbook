@@ -1,0 +1,19 @@
+uuid: 69adaf8f-0476-4b61-ad4f-3117e8f76999
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - mymodule
+id: comment.field_real_name
+field_name: field_real_name
+entity_type: comment
+type: realname
+settings: {  }
+module: mymodule
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

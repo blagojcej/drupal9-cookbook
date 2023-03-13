@@ -1,0 +1,21 @@
+uuid: 17da3f12-d725-47c2-864c-e1fd1ffe9605
+langcode: en
+status: true
+dependencies:
+  module:
+    - mymodule
+  theme:
+    - semanticui_theme
+id: semanticui_theme_copyright
+theme: semanticui_theme
+region: header
+weight: 0
+provider: null
+plugin: copyright_block
+settings:
+  id: copyright_block
+  label: Copyright
+  label_display: '0'
+  provider: mymodule
+  company_name: ' X Gate'
+visibility: {  }

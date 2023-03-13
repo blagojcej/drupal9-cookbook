@@ -1,0 +1,6 @@
+uuid: 8a658bf1-4807-40f9-8ebe-2e9d36fd973b
+langcode: en
+status: true
+dependencies: {  }
+id: message
+label: Message

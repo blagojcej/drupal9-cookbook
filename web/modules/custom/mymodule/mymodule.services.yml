@@ -1,0 +1,8 @@
+services:
+  mymodule.route_subscriber:
+    class: Drupal\mymodule\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }
+  plugin.manager.unit:
+    class: Drupal\mymodule\UnitManager
+    arguments: ['@container.namespaces', '@cache.discovery', '@module_handler']

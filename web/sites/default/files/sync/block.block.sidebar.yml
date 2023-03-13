@@ -1,0 +1,25 @@
+uuid: 4154d27e-ce99-46da-ab75-7caf6e578dc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sidebar
+  module:
+    - system
+  theme:
+    - olivero
+id: sidebar
+theme: olivero
+region: sidebar
+weight: -6
+provider: null
+plugin: 'system_menu_block:sidebar'
+settings:
+  id: 'system_menu_block:sidebar'
+  label: Sidebar
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

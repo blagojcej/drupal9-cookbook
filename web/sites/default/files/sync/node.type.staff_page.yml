@@ -1,0 +1,18 @@
+uuid: e6142b91-9f98-47df-998b-f438a55c2612
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Staff Page'
+type: staff_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

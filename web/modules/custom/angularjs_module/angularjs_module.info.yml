@@ -1,0 +1,5 @@
+name: AngularJS module
+type: module
+description: Provides an AngularJS app.
+version: VERSION
+core_version_requirement: ^9.4

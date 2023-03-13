@@ -1,0 +1,24 @@
+uuid: 4f2fc9e4-5de9-4b57-8254-2f152331b59b
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+    - field.storage.comment.field_real_name
+  module:
+    - mymodule
+id: comment.comment.field_real_name
+field_name: field_real_name
+entity_type: comment
+bundle: comment
+label: 'Real Name'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    first_name: ''
+    last_name: ''
+default_value_callback: ''
+settings: {  }
+field_type: realname

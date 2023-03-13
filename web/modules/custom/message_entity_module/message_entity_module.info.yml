@@ -1,0 +1,6 @@
+name: Entity Lecture module - Message Entity
+type: module
+description: This is an entity module from the Drupal 9 Cookbook - Entity API chapter
+package: Custom
+version: VERSION
+core_version_requirement: ^9.4

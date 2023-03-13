@@ -1,0 +1,20 @@
+uuid: 639585ec-4aec-4622-8626-32150518c87b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: user.field_highlighted_contributions
+field_name: field_highlighted_contributions
+entity_type: user
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

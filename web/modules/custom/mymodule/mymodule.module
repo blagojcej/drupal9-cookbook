@@ -1,0 +1,103 @@
+<?php
+
+/**
+ * @file
+ * Custom module that alters forms.
+ */
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ **/
+function mymodule_form_system_site_information_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
+    // Code to alter form or form state here
+    $form['site_phone'] = array(
+        '#type' => 'tel',
+        '#title' => t('Site phone'),
+        '#default_value' => Drupal::config('system.site')->get('phone'),
+    );
+
+    // $validators = $form_state->getValidateHandlers();
+    // $validators[] = 'mymodule_form_validate';
+    // $form_state->setValidateHandlers($validators);
+    // Use array_unshift PHP function to place your validator callback at the beginning of the array and run first
+
+    $form['#submit'][] = 'mymodule_system_site_information_phone_submit';
+    // OR
+    // $submit_handlers = $form_state->getSubmitHandlers();
+    // $submit_handlers [] = 'mymodule_system_site_information_phone_submit';
+    // $form_state->setSubmitHandlers($submit_handlers );
+    // Use array_unshift PHP function to place your callback at the beginning of the array and run first
+}
+
+/**
+ * Form callback to save site_phone
+ * @param array $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function mymodule_system_site_information_phone_submit(array &$form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
+    $config = Drupal::configFactory()->getEditable('system.site');
+    $config->set('phone', $form_state->getValue('site_phone'))->save();
+}
+
+/**
+ * Form callback to save site_phone
+ * @param array $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function mymodule_form_validate(array &$form, \Drupal\Core\Form\FormStateInterface $form_state)
+{
+    //Do nothing
+}
+
+/**
+ * Implements hook_block_alter().
+ */
+function mymodule_block_alter(&$definitions)
+{
+    $definitions['user_login_block']['admin_label'] = t('Login');
+}
+
+/**
+ * Implements hook_block_build_alter().
+ */
+function hook_block_build_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block)
+{
+    // Add the 'url' cache the block per URL.
+    if ($block->getBaseId() == 'myblock') {
+        $build['#contexts'][] = 'url';
+    }
+}
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function hook_block_view_alter(array &$build, \Drupal\Core\Block\BlockPluginInterface $block)
+{
+    // Remove the contextual links on all blocks that provide them.
+    // if (isset($build['#contextual_links'])) {
+    //     unset($build['#contextual_links']);
+    // }
+}
+
+/**
+ * Implements hook_block_access().
+ */
+function mymodule_block_access(\Drupal\block\Entity\Block $block, $operation, \Drupal\Core\Session\AccountInterface $account)
+{
+    // Example code that would prevent displaying the Copyright' block in a region different than the footer.
+    if ($operation == 'view' && $block->getPluginId() == 'copyright') {
+        return \Drupal\Core\Access\AccessResult::forbiddenIf($block->getRegion() != 'footer');
+    }
+    // No opinion.
+    return \Drupal\Core\Access\AccessResult::neutral();
+}
+
+/**
+ * Implements hook_physical_unit_alter().
+ */
+function mymodule_physical_unit_alter()
+{
+
+}

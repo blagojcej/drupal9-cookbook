@@ -1,0 +1,24 @@
+uuid: 6c31a320-ac7d-4adf-8167-06fc825cce83
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent_articles
+  module:
+    - views
+  theme:
+    - semanticui_theme
+id: semanticui_theme_views_block__recent_articles_block_1
+theme: semanticui_theme
+region: header
+weight: -8
+provider: null
+plugin: 'views_block:recent_articles-block_1'
+settings:
+  id: 'views_block:recent_articles-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

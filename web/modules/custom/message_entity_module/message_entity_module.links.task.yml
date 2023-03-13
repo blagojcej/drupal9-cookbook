@@ -1,0 +1,4 @@
+entity.message.collection_tab:
+  title: 'Messages'
+  route_name: entity.message.collection
+  base_route: system.admin_content

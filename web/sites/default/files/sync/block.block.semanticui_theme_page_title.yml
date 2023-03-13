@@ -1,0 +1,20 @@
+uuid: 7d64c66e-6c37-4b90-9c43-14b0990f1fa0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - semanticui_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: semanticui_theme_page_title
+theme: semanticui_theme
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

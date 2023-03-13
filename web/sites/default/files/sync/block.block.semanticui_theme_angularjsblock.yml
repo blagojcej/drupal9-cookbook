@@ -1,0 +1,20 @@
+uuid: d9233b65-0974-4ed1-810d-8b4a63d5d4be
+langcode: en
+status: true
+dependencies:
+  module:
+    - angularjs_module
+  theme:
+    - semanticui_theme
+id: semanticui_theme_angularjsblock
+theme: semanticui_theme
+region: header
+weight: -9
+provider: null
+plugin: angularjs_module_angular_block
+settings:
+  id: angularjs_module_angular_block
+  label: 'AngularJS Block'
+  label_display: visible
+  provider: angularjs_module
+visibility: {  }

@@ -1,0 +1,6 @@
+name: Config Entity Lecture module
+type: module
+description: This is a config entity module from the Drupal 9 Cookbook - Entity API chapter
+package: Custom
+version: VERSION
+core_version_requirement: ^9.4

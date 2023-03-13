@@ -1,0 +1,20 @@
+{
+  "name": "semanticui_theme",
+  "description": "Example theme with Semantic UI",
+  "main": "",
+  "authors": [
+    "Blagojce Jovanoski"
+  ],
+  "license": "GPL",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic": "semantic-ui#^2.5.0"
+  }
+}

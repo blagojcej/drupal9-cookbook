@@ -1,0 +1,22 @@
+uuid: 7045a2c4-6d87-4860-b16d-c94ad0e57e9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - semanticui_theme
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: semanticui_theme_powered
+theme: semanticui_theme
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

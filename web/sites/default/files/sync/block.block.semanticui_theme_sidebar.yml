@@ -1,0 +1,25 @@
+uuid: 43e39bda-e8c2-47b6-9a1d-27aac2eb060a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sidebar
+  module:
+    - system
+  theme:
+    - semanticui_theme
+id: semanticui_theme_sidebar
+theme: semanticui_theme
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:sidebar'
+settings:
+  id: 'system_menu_block:sidebar'
+  label: Sidebar
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
